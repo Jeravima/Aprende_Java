@@ -18,11 +18,10 @@ class MyApp extends StatelessWidget {
 
                  padding:EdgeInsets.all(5.0) ,
                 child: Image.network("https://drive.google.com/file/d/1VRIQrxfI3tu33tYFOdVpArTTenfNYzZs/view?usp=sharing")
-          ),
-             ],
+                 ),
+                ],
            ),
-        
-      ),
-    );
+       ),
+     );
   }
 }
