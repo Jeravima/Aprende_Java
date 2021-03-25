@@ -9,19 +9,14 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Aprende Java'),
+          title: Text('Material App Bar'),
         ),
-        body: 
-           ListView(
-             children: [
-               Container(
-
-                 padding:EdgeInsets.all(5.0) ,
-                child: Image.network("https://drive.google.com/file/d/1VRIQrxfI3tu33tYFOdVpArTTenfNYzZs/view?usp=sharing")
-                 ),
-                ],
-           ),
-       ),
-     );
+        body: Center(
+          child: Container(
+            child: Text('Hello World'),
+          ),
+        ),
+      ),
+    );
   }
 }
