@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Material App Bar'),
         ),
-        body: Center(
+          body: Center(
           child: Container(
             child: Text('Hello World'),
           ),
