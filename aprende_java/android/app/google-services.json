@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1051892283831",
+    "project_id": "aprende-java-a5c68",
+    "storage_bucket": "aprende-java-a5c68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051892283831:android:2b4411bbd29d07fa489032",
+        "android_client_info": {
+          "package_name": "com.example.aprende_java"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051892283831-3cqbd9d4idgmla6ieamk22gk5bsogdsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaxk6K-svI2pjLX962AhaNeV8PvOApoLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051892283831-3cqbd9d4idgmla6ieamk22gk5bsogdsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
