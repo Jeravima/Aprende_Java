@@ -3,6 +3,7 @@ import 'package:aprende_java/Principal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aprende_java/Widgets/GradientBack.dart';
+import 'package:aprende_java/Widgets/ButtonGreen.dart';
 
 // ignore: camel_case_types
 class login extends StatefulWidget {
@@ -21,6 +22,7 @@ class _login extends State<login>{
 String hola='hola';
 @override
   Widget build(BuildContext context) {
+    // ignore: todo
     // TODO: implement build
     return singInGoogle();
   }
@@ -32,6 +34,7 @@ String hola='hola';
         children: [
           GradientBack(title: "",height: null),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
               Text("Bienvenido \nCon esta increible app aprenderas java en pocos dias.",
@@ -41,6 +44,14 @@ String hola='hola';
                 color: Colors.blue,
                 fontWeight: FontWeight.bold,
               ),
+              ),
+              ButtonGreen(text: "Login with gmail", onPressed: (){
+
+
+              },
+              width: 300.0,
+              height: 50.0,
+              
               )
             ],
           )
