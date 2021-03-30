@@ -1,33 +1,53 @@
-// ignore: unused_import
-import 'package:aprende_java/Principal.dart';
+
+import 'package:aprende_java/Principal.dart'; 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aprende_java/Widgets/GradientBack.dart';
 import 'package:aprende_java/Widgets/ButtonGreen.dart';
+import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
-// ignore: camel_case_types
-class login extends StatefulWidget {
+
+class Login extends StatefulWidget {
  
  @override 
  State createState(){
 
-   return _login();
+   return _Login();
  }
 
 }
 
-// ignore: camel_case_types
-class _login extends State<login>{
 
-String hola='hola';
+class _Login extends State <Login>{
+
+UserBloc userBloc;
+
 @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
-    return singInGoogle();
+    
+    userBloc = BlocProvider.of(context);
+    return _handleCurrentSession();
   }
 
-  Widget singInGoogle(){
+  Widget _handleCurrentSession(){
+    return StreamBuilder(
+      stream: userBloc.authStatus,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if(!snapshot.hasData || snapshot.hasError) {
+          return signInGoogle();
+          
+        } else {
+          return Principal();
+        }
+      },
+    );
+}
+  
+
+  Widget signInGoogle(){
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
@@ -46,8 +66,7 @@ String hola='hola';
               ),
               ),
               ButtonGreen(text: "Login with gmail", onPressed: (){
-
-
+                userBloc.signIn();
               },
               width: 300.0,
               height: 50.0,

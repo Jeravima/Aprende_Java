@@ -1,6 +1,7 @@
   import 'package:flutter/material.dart';
   
 
+  // ignore: must_be_immutable
   class ButtonGreen extends StatefulWidget{
 
     final String text;
@@ -21,6 +22,7 @@
 
     @override
   Widget build(BuildContext context) {
+    // ignore: todo
     // TODO: implement build
     return InkWell(
       onTap: widget.onPressed,
