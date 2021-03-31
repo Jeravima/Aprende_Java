@@ -4,6 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class UserBloc implements Bloc {
 
+  /* DE AQUI NO SE TOCA NADA  
+     Gracias
+  */
   
   final _auth_repository = AuthRepository();
   Stream<FirebaseUser> streamFirebase = FirebaseAuth.instance.onAuthStateChanged;
@@ -11,6 +14,11 @@ class UserBloc implements Bloc {
 
   Future<FirebaseUser> signIn() {
     return _auth_repository.signInFirebase();
+  }
+
+  signOut(){
+
+    _auth_repository.signOut();
   }
 
 

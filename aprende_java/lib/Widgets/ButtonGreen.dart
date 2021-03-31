@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 
 class ButtonGreen extends StatefulWidget {
 
+  /* Esto hace que le widget quede predefinido
+     De aqui no toque nada 
+     Si quiere hacer otro boton copie la clase 
+     y toque en otra clase 
+     Gracias.
+  */
+
   final String text;
   double width = 0.0;
   double height = 0.0;
@@ -20,6 +27,11 @@ class _ButtonGreen extends State<ButtonGreen>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return InkWell(
+      /* Aqui se definen las cosas lindas del 
+        boton 
+        NO TOQUE NADA
+        Gracias
+      */
       onTap: widget.onPressed,
       child: Container(
         margin: EdgeInsets.only(

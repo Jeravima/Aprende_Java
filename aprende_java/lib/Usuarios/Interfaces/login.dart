@@ -21,6 +21,7 @@ class Login extends StatefulWidget {
 
 class _Login extends State <Login>{
 
+//Define la seccion de la persona
 UserBloc userBloc;
 
 @override
@@ -28,10 +29,17 @@ Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
     
+    //Construimos el objeto y le damos el 
+    //Contexto de la aplicacion
     userBloc = BlocProvider.of(context);
     return _handleCurrentSession();
   }
 
+  /* Esto lo que hace es saber si la
+   persona se encuentra conectada o no
+   Si esta conectada se pasa a una pestaña
+   Si no se lleva a que conecte con google
+  */
   Widget _handleCurrentSession(){
     return StreamBuilder(
       stream: userBloc.authStatus,
@@ -46,7 +54,10 @@ Widget build(BuildContext context) {
     );
 }
   
-
+  /*Esto es el widget de conectarse con google
+    NO TOQUE NADA SI NO SABE LO QUE HACE 
+    Gracias.
+   */
   Widget signInGoogle(){
     return Scaffold(
       body: Stack(
@@ -57,11 +68,35 @@ Widget build(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-              Text("Bienvenido \nCon esta increible app aprenderas java en pocos dias.",
+              Text("Bienvenido \n",
               style: TextStyle(
                 fontSize: 37.0,
                 fontFamily: "lato",
-                color: Colors.blue,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+              Text(" Con esta increible ",
+              style: TextStyle(
+                fontSize: 37.0,
+                fontFamily: "lato",
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+              Text(" app aprenderas java ",
+              style: TextStyle(
+                fontSize: 37.0,
+                fontFamily: "lato",
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+                Text(" en pocos dias. ",
+              style: TextStyle(
+                fontSize: 37.0,
+                fontFamily: "lato",
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
               ),
