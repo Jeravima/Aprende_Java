@@ -3,29 +3,23 @@ import 'package:aprende_java/Usuarios/repository/auth_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class UserBloc implements Bloc {
-
   /* DE AQUI NO SE TOCA NADA  
      Gracias
   */
-  
+
   final _auth_repository = AuthRepository();
-  Stream<FirebaseUser> streamFirebase = FirebaseAuth.instance.onAuthStateChanged;
+  Stream<FirebaseUser> streamFirebase =
+      FirebaseAuth.instance.onAuthStateChanged;
   Stream<FirebaseUser> get authStatus => streamFirebase;
 
   Future<FirebaseUser> signIn() {
     return _auth_repository.signInFirebase();
   }
 
-  signOut(){
-
+  signOut() {
     _auth_repository.signOut();
   }
 
-
   @override
-  void dispose() {
-
-
-  }
+  void dispose() {}
 }
-
