@@ -1,9 +1,20 @@
+import 'package:aprende_java/Usuarios/Interfaces/Profilesettings.dart';
 import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:flutter/material.dart';
 import 'package:aprende_java/Widgets/GradientBack.dart';
 import 'package:aprende_java/Widgets/ButtonGreen.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-class Principal extends StatelessWidget {
+
+class Principal extends StatefulWidget{
+
+ @override 
+ State createState(){
+
+   return _Principal();
+ }
+
+} 
+class _Principal extends State <Principal> {
   
 
   UserBloc userBloc;
@@ -28,6 +39,7 @@ return Scaffold(
                 fontWeight: FontWeight.bold,
               ),
               ),
+              Profilesettings(),
               ButtonGreen(text: "Cerrar sesión", onPressed: (){
                 /* Cuando se toca el boton se cierra la sesion de 
                 la persona y se va a que escoga otra vez la cuenta

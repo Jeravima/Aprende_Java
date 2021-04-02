@@ -1,5 +1,6 @@
 
-import 'package:aprende_java/Principal.dart'; 
+import 'package:aprende_java/Principal.dart';
+import 'package:aprende_java/Usuarios/Interfaces/Profilesettings.dart'; 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aprende_java/Widgets/GradientBack.dart';
@@ -101,6 +102,7 @@ Widget build(BuildContext context) {
               ),
               ),
               ButtonGreen(text: "Login with gmail", onPressed: (){
+                userBloc.signOut();
                 userBloc.signIn();
               },
               width: 300.0,
