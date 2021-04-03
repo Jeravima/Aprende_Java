@@ -19,6 +19,7 @@ class Login extends StatefulWidget {
 class _Login extends State<Login> {
 //Define la seccion de la persona
   UserBloc userBloc;
+   double screenWidht;
 
   @override
   Widget build(BuildContext context) {
@@ -58,44 +59,21 @@ class _Login extends State<Login> {
       body: Stack(
         alignment: Alignment.center,
         children: [
-          GradientBack(title: "", height: null),
+          GradientBack(height: null),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Bienvenido \n",
-                style: TextStyle(
-                  fontSize: 37.0,
-                  fontFamily: "lato",
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                " Con esta increible ",
-                style: TextStyle(
-                  fontSize: 37.0,
-                  fontFamily: "lato",
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                " app aprenderas java ",
-                style: TextStyle(
-                  fontSize: 37.0,
-                  fontFamily: "lato",
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                " en pocos dias. ",
-                style: TextStyle(
-                  fontSize: 37.0,
-                  fontFamily: "lato",
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+            children: <Widget>[
+              Flexible(
+                child: Container(
+                  width: screenWidht,
+                  child: Text(
+                    "Bienvenido \n Esta es tu app de java ",
+                    style: TextStyle(
+                        fontSize: 37.0,
+                        fontFamily: "Lato",
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
               ButtonGreen(
@@ -103,14 +81,12 @@ class _Login extends State<Login> {
                 onPressed: () {
                   userBloc.signIn().then((FirebaseUser user) {
                     userBloc.updateUserData(User(
-                      uid: user.uid,
-                      name: user.displayName,
-                      email: user.email,
-                      photoURL: user.photoUrl
-                    ));
+                        uid: user.uid,
+                        name: user.displayName,
+                        email: user.email,
+                        photoURL: user.photoUrl));
                   });
                 },
-                
                 width: 300.0,
                 height: 50.0,
               )

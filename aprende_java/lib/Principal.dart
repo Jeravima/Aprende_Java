@@ -5,59 +5,54 @@ import 'package:aprende_java/Widgets/GradientBack.dart';
 import 'package:aprende_java/Widgets/ButtonGreen.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
-class Principal extends StatefulWidget{
+class Principal extends StatefulWidget {
+  @override
+  State createState() {
+    return _Principal();
+  }
+}
 
- @override 
- State createState(){
-
-   return _Principal();
- }
-
-} 
-class _Principal extends State <Principal> {
-  
-
+class _Principal extends State<Principal> {
   UserBloc userBloc;
 
   @override
   Widget build(BuildContext context) {
     userBloc = BlocProvider.of(context);
-return Scaffold(
+    return Scaffold(
       body: Stack(
         alignment: Alignment.center,
         children: [
-          GradientBack(title: "",height: null),
+          GradientBack(height: null),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
-              Text("Bienvenido este es la pantalla principal.",
-              style: TextStyle(
-                fontSize: 37.0,
-                fontFamily: "lato",
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+              Text(
+                "Bienvenido este es la pantalla principal.",
+                style: TextStyle(
+                  fontSize: 37.0,
+                  fontFamily: "lato",
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Profilesettings(),
-              ButtonGreen(text: "Cerrar sesión", onPressed: (){
-                /* Cuando se toca el boton se cierra la sesion de 
+              ButtonGreen(
+                text: "Cerrar sesión",
+                onPressed: () {
+                  /* Cuando se toca el boton se cierra la sesion de 
                 la persona y se va a que escoga otra vez la cuenta
                 El metodo de la parte del login mira si esta conectado 
                 hace que vuelva a esa pestaña 
                 */
-                userBloc.signOut();
-              },
-              width: 300.0,
-              height: 50.0,
-              
+                  userBloc.signOut();
+                },
+                width: 300.0,
+                height: 50.0,
               )
             ],
           )
-          
         ],
-        
       ),
     );
-  }  
   }
+}
