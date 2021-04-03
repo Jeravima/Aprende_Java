@@ -1,5 +1,7 @@
 import 'package:aprende_java/Principal.dart';
 import 'package:aprende_java/Usuarios/Interfaces/Profilesettings.dart';
+import 'package:aprende_java/Usuarios/model/user.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aprende_java/Widgets/GradientBack.dart';
@@ -99,8 +101,16 @@ class _Login extends State<Login> {
               ButtonGreen(
                 text: "Login with gmail",
                 onPressed: () {
-                  userBloc.signIn();
+                  userBloc.signIn().then((FirebaseUser user) {
+                    userBloc.updateUserData(User(
+                      uid: user.uid,
+                      name: user.displayName,
+                      email: user.email,
+                      photoURL: user.photoUrl
+                    ));
+                  });
                 },
+                
                 width: 300.0,
                 height: 50.0,
               )
