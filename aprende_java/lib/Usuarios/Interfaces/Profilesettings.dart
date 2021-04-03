@@ -58,7 +58,8 @@ class _Profilesettings extends State<Profilesettings> {
       user = User(
           name: snapshot.data.displayName,
           email: snapshot.data.email,
-          photoURL: snapshot.data.photoUrl);
+          photoURL: snapshot.data.photoUrl, 
+          uid: '');
       final title = Text(
         'Profile',
         style: TextStyle(
