@@ -1,4 +1,5 @@
-import 'package:aprende_java/Principal.dart';
+import 'package:aprende_java/Interfaz/main.dart';
+import 'package:aprende_java/Interfaz/Principal.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';

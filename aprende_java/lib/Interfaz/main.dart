@@ -1,9 +1,9 @@
 // ignore: unused_import
-import 'package:aprende_java/Principal.dart';
+import 'package:aprende_java/Interfaz/Principal.dart';
 import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-import 'Usuarios/Interfaces/login.dart';
+import 'package:aprende_java/Usuarios/Interfaces/Login.dart';
 
 void main() => runApp(MyApp());
 
