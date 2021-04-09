@@ -23,33 +23,42 @@ class _Principal extends State<Principal> {
         alignment: Alignment.center,
         children: [
           GradientBack(height: null),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Bienvenido este es la pantalla principal.",
-                style: TextStyle(
-                  fontSize: 37.0,
-                  fontFamily: "lato",
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Bienvenido este es la pantalla principal.",
+                  style: TextStyle(
+                    fontSize: 37.0,
+                    fontFamily: "lato",
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Profilesettings(),
-              ButtonGreen(
-                text: "Cerrar sesión",
-                onPressed: () {
-                  /* Cuando se toca el boton se cierra la sesion de 
-                la persona y se va a que escoga otra vez la cuenta
-                El metodo de la parte del login mira si esta conectado 
-                hace que vuelva a esa pestaña 
-                */
-                  userBloc.signOut();
-                },
-                width: 300.0,
-                height: 50.0,
-              )
-            ],
+                //Sirve para la ubicacion de la foto de usuario 
+                Positioned(
+                  top: 25,
+                  right: 50 ,
+                  child: Profilesettings()
+                  
+                  ),
+                ButtonGreen(
+                  text: "Cerrar sesión",
+                  onPressed: () {
+                    /* Cuando se toca el boton se cierra la sesion de 
+                  la persona y se va a que escoga otra vez la cuenta
+                  El metodo de la parte del login mira si esta conectado 
+                  hace que vuelva a esa pestaña 
+                  */
+                    userBloc.signOut();
+                  },
+                  width: 300.0,
+                  height: 50.0,
+                )
+              ],
+            ),
           )
         ],
       ),
