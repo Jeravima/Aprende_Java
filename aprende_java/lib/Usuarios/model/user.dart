@@ -5,6 +5,7 @@ class User {
   final String name;
   final String email;
   final String photoURL;
+  final String rol;
 
   User({
     Key key,
@@ -12,5 +13,6 @@ class User {
     @required this.name,
     @required this.email,
     @required this.photoURL,
+    @required this.rol,
   });
 }
