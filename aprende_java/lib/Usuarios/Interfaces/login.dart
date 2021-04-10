@@ -1,5 +1,7 @@
 import 'package:aprende_java/Interfaz/main.dart';
 import 'package:aprende_java/Interfaz/Principal.dart';
+import 'package:aprende_java/Nuevo/detail_page.dart';
+import 'package:aprende_java/Usuarios/Interfaces/Profilesettings.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -85,7 +87,7 @@ class _Login extends State<Login> {
                         name: user.displayName,
                         email: user.email,
                         photoURL: user.photoUrl,
-                        rol: "ola"));
+                        rol: "Estudiante"));
                   });
                 },
                 width: 300.0,

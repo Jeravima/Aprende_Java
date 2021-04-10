@@ -13,7 +13,8 @@ class CloudFirestoreAPI {
       'name': user.name,
       'email': user.email,
       'photoURL': user.photoURL,
-      'lastSignIn': DateTime.now()
+      'lastSignIn': DateTime.now(),
+      'rol' : user.rol,
     }, merge: true);
   }
 }
