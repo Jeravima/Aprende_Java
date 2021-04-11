@@ -30,6 +30,7 @@ class _Principal extends State<Principal> {
           GradientBack(height: null),
 
           //Sirve para la ubicacion de la foto de usuario
+          //sds
           Positioned(
             top: 20,
             right: 10,
@@ -167,33 +168,8 @@ class _Principal extends State<Principal> {
                 ),
                   
               ),
-        ],
-        bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(36.0),
-          ),
-          color: navigationColor,
-        ),
-        padding: const EdgeInsets.all(24),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            IconButton(
-              icon: Image.asset('assets/menu_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/search_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/profile_icon.png'),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
+        ]
+      
               
                   
 
@@ -202,5 +178,7 @@ class _Principal extends State<Principal> {
         
       ),
     );
+    
   }
+
 }

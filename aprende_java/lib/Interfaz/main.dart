@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'Aprende java',
           //home: PlatziTripsCupertino(),
           home: Login(),
         ),

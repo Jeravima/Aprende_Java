@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
+       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(
             top: Radius.circular(36.0),
