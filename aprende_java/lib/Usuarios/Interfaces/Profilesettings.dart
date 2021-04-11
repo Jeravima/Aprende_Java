@@ -71,7 +71,7 @@ class _Profilesettings extends State<Profilesettings> {
       );
 
       return Container(
-        margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 50.0),
+        margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 0.0),
         child: Column(
           children: <Widget>[
             Row(

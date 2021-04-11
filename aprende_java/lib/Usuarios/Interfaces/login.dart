@@ -86,6 +86,7 @@ class _Login extends State<Login> {
                         uid: user.uid,
                         name: user.displayName,
                         email: user.email,
+                        
                         photoURL: user.photoUrl,
                         rol: "Estudiante"));
                   });
