@@ -1,7 +1,11 @@
-import 'package:aprende_java/Usuarios/Interfaces/login.dart';
-import 'package:aprende_java/Widgets/liquid_pages.dart';
+import 'package:aprende_java/Nuevo/home_page.dart';
+import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
+import 'package:aprende_java/Usuarios/model/user.dart';
+import 'package:aprende_java/Widgets/ButtonGreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class PageOnboardBank extends StatefulWidget {
@@ -11,6 +15,7 @@ class PageOnboardBank extends StatefulWidget {
 
 class _PageOnboardBankState extends State<PageOnboardBank> {
   /* VARIABLES */
+  UserBloc userBloc;
   PageController _controller = PageController(initialPage: 0);
   Color colorFondo = Colors.white;
 
@@ -25,6 +30,25 @@ class _PageOnboardBankState extends State<PageOnboardBank> {
     colorFondo = Theme.of(context).brightness == Brightness.dark
         ? Colors.deepPurple
         : Colors.deepPurple[50];
+    userBloc = BlocProvider.of(context);
+    return _handleCurrentSession();
+  }
+  /* WIDGETS */
+
+  Widget _handleCurrentSession() {
+    return StreamBuilder(
+      stream: userBloc.authStatus,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (!snapshot.hasData || snapshot.hasError) {
+          return mostar();
+        } else {
+          return HomePage();
+        }
+      },
+    );
+  }
+
+  Widget mostar() {
     return Scaffold(
       backgroundColor: colorFondo,
       body: body(),
@@ -40,7 +64,6 @@ class _PageOnboardBankState extends State<PageOnboardBank> {
     );
   }
 
-  /* WIDGETS */
   Widget body() {
     return PageView(
       /* Una lista desplazable que funciona página por página. */
@@ -179,19 +202,17 @@ class _PageOnboardBankState extends State<PageOnboardBank> {
                 padding: const EdgeInsets.symmetric(vertical: 24),
                 child: Text(texto,
                     style: estiloTitulo, textAlign: TextAlign.center)),
-            RaisedButton(
-              shape: StadiumBorder(),
-              color: color,
-              child: Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
-                  child: Text(textoButton,
-                      style: TextStyle(fontSize: 20.0, color: colorTexto))),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Login()),
-              ),
-            ),
+            SignInButton(Buttons.GoogleDark, text: "Sign up with Google",
+                onPressed: () {
+              userBloc.signIn().then((FirebaseUser user) {
+                userBloc.updateUserData(User(
+                    uid: user.uid,
+                    name: user.displayName,
+                    email: user.email,
+                    photoURL: user.photoUrl,
+                    rol: "Estudiante"));
+              });
+            })
           ],
         ),
       ),
