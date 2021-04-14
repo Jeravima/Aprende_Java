@@ -1,7 +1,6 @@
-import 'package:aprende_java/Interfaz/main.dart';
 import 'package:aprende_java/Interfaz/Principal.dart';
-import 'package:aprende_java/Nuevo/detail_page.dart';
-import 'package:aprende_java/Usuarios/Interfaces/Profilesettings.dart';
+import 'package:aprende_java/Interfaz/inicio.dart';
+import 'package:aprende_java/Nuevo/home_page.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,6 +11,7 @@ import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class Login extends StatefulWidget {
+  
   @override
   State createState() {
     return _Login();
@@ -46,7 +46,7 @@ class _Login extends State<Login> {
         if (!snapshot.hasData || snapshot.hasError) {
           return signInGoogle();
         } else {
-          return Principal();
+          return HomePage();
         }
       },
     );
@@ -58,7 +58,8 @@ class _Login extends State<Login> {
    */
   Widget signInGoogle() {
     return Scaffold(
-      body: Stack(
+      body:
+      Stack(
         alignment: Alignment.center,
         children: [
           GradientBack(height: null),

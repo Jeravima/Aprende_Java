@@ -1,5 +1,8 @@
+
 // ignore: unused_import
 import 'package:aprende_java/Interfaz/Principal.dart';
+import 'package:aprende_java/Interfaz/inicio.dart';
+import 'package:aprende_java/Nuevo/home_page.dart';
 import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
@@ -14,8 +17,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Aprende java',
-          //home: PlatziTripsCupertino(),
-          home: Login(),
+          home: PageOnboardBank(),
         ),
         bloc: UserBloc());
   }
