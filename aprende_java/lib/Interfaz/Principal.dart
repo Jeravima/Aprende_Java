@@ -28,7 +28,7 @@ class _Principal extends State<Principal> {
         alignment: Alignment.center,
         children: [
           GradientBack(height: null),
-
+          
           //Sirve para la ubicacion de la foto de usuario
           //sds
           Positioned(
