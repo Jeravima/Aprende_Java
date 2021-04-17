@@ -1,12 +1,12 @@
-import 'package:aprende_java/Nuevo/home_page.dart';
 import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
-import 'package:aprende_java/Widgets/ButtonGreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import 'PrincipalScreen.dart';
 
 class PageOnboardBank extends StatefulWidget {
   @override
@@ -42,7 +42,7 @@ class _PageOnboardBankState extends State<PageOnboardBank> {
         if (!snapshot.hasData || snapshot.hasError) {
           return mostar();
         } else {
-          return HomePage();
+          return PlatziTrips();
         }
       },
     );

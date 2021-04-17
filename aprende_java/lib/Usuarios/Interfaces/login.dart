@@ -1,6 +1,6 @@
-import 'package:aprende_java/Interfaz/Principal.dart';
-import 'package:aprende_java/Interfaz/inicio.dart';
+
 import 'package:aprende_java/Nuevo/home_page.dart';
+import 'package:aprende_java/Platzi/platzi_trips_cupertino.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -46,7 +46,7 @@ class _Login extends State<Login> {
         if (!snapshot.hasData || snapshot.hasError) {
           return signInGoogle();
         } else {
-          return HomePage();
+          return PlatziTripsCupertino();
         }
       },
     );

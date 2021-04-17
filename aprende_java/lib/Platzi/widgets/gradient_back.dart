@@ -1,13 +1,12 @@
-import 'package:aprende_java/Nuevo/constants.dart';
 import 'package:flutter/material.dart';
 
-class GradientBackxd extends StatelessWidget {
+class GradientBack extends StatelessWidget {
 
 
   String title = "Popular";
   double height = 0.0;
 
-  GradientBackxd({Key key, this.height});//height = null full screen
+  GradientBack({Key key, this.height});//height = null full screen
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,10 @@ class GradientBackxd extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-            colors: [gradientStartColor, gradientEndColor],
+            colors: [
+              Color(0xFF4268D3),
+              Color(0xFF584CD1)
+            ],
           begin: FractionalOffset(0.2, 0.0),
           end: FractionalOffset(1.0, 0.6),
             stops: [0.0, 0.6],
@@ -46,7 +48,17 @@ class GradientBackxd extends StatelessWidget {
           ),
         ),
       ),
-      
+      /*Text(
+        title,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 30.0,
+          fontFamily: "Lato",
+          fontWeight: FontWeight.bold
+        ),
+      )*/
+
+      //alignment: Alignment(-0.9, -0.6),
 
     );
   }

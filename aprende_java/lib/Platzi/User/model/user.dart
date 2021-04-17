@@ -1,3 +1,4 @@
+import 'package:aprende_java/Platzi/Place/model/place.dart';
 import 'package:flutter/material.dart';
 
 class User {
@@ -5,16 +6,20 @@ class User {
   final String name;
   final String email;
   final String photoURL;
-  final String rol;
+  final List<Place> myPlaces;
+  final List<Place> myFavoritePlaces;
+
+  //myFavoritePlaces
+  //myPlaces
+
   User({
     Key key,
     @required this.uid,
     @required this.name,
     @required this.email,
     @required this.photoURL,
-    @required this.rol,
+    this.myPlaces,
+    this.myFavoritePlaces
   });
 
-  
 }
-
