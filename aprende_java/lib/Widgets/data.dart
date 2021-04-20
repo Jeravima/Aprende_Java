@@ -16,7 +16,7 @@ class PlanetInfo {
 
 List<PlanetInfo> planets = [
   PlanetInfo(1,
-      name: 'Carlos',
+      name: 'Introduccion',
       iconImage: 'assets/mercury.png',
       description:
           "Zipping around the sun in only 88 days, Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury experiences dramatic changes in its day and night temperatures: Day temperatures can reach a scorching 840  F (450 C), which is hot enough to melt lead. Meanwhile on the night side, temperatures drop to minus 290 F (minus 180 C).",

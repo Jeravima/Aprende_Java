@@ -1,4 +1,4 @@
-import 'package:aprende_java/Nuevo/constants.dart';
+import 'package:aprende_java/Widgets/constants.dart';
 import 'package:flutter/material.dart';
 
 class GradientBackxd extends StatelessWidget {

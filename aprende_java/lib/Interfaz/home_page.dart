@@ -1,11 +1,10 @@
-import 'package:aprende_java/Interfaz/Principal.dart';
-import 'package:aprende_java/Usuarios/Interfaces/login.dart';
+import 'package:aprende_java/Interfaz/detail_page.dart';
+import 'package:aprende_java/Widgets/data.dart';
 import 'package:flutter/material.dart';
-import 'package:aprende_java/Nuevo/detail_page.dart';
-import 'constants.dart';
+import 'package:aprende_java/Widgets/constants.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
-import 'data.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: gradientEndColor,
       body: Container(
         decoration: BoxDecoration(
@@ -80,8 +80,6 @@ class _HomePageState extends State<HomePage> {
                     builder:
                         DotSwiperPaginationBuilder(activeSize: 20, space: 8),
                   ),
-
-                  
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
@@ -185,7 +183,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-       
     );
   }
 }

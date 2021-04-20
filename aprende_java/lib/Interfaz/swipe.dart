@@ -1,9 +1,10 @@
 import 'package:aprende_java/Usuarios/Interfaces/login.dart';
 import 'package:aprende_java/Widgets/ButtonGreen.dart';
-import 'package:aprende_java/Widgets/liquidPages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:liquid_swipe/liquid_swipe.dart';
+
+final estiloTexto = TextStyle(fontSize: 20.0, color: Colors.white);
 
 class Swiper extends StatelessWidget {
   @override

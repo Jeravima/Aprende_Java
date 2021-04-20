@@ -1,3 +1,4 @@
+import 'package:aprende_java/Interfaz/Cupertino.dart';
 import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -42,7 +43,7 @@ class _PageOnboardBankState extends State<PageOnboardBank> {
         if (!snapshot.hasData || snapshot.hasError) {
           return mostar();
         } else {
-          return PlatziTrips();
+          return PlatziTripsCupertino();
         }
       },
     );

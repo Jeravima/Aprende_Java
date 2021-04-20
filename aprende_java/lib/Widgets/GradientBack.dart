@@ -1,13 +1,12 @@
-import 'package:aprende_java/Nuevo/constants.dart';
+
+import 'package:aprende_java/Widgets/constants.dart';
 import 'package:flutter/material.dart';
 
 class GradientBack extends StatelessWidget {
-
-
   String title = "Popular";
   double height = 0.0;
 
-  GradientBack({Key key, this.height});//height = null full screen
+  GradientBack({Key key, this.height}); //height = null full screen
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +15,7 @@ class GradientBack extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidht = MediaQuery.of(context).size.width;
 
-    if(height == null){
+    if (height == null) {
       height = screenHeight;
     }
 
@@ -24,16 +23,12 @@ class GradientBack extends StatelessWidget {
       width: screenWidht,
       height: height,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            colors: [gradientStartColor, gradientEndColor],
-          begin: FractionalOffset(0.2, 0.0),
-          end: FractionalOffset(1.0, 0.6),
-            stops: [0.0, 0.6],
-            tileMode: TileMode.clamp
-        )
-      ),
-
-
+          gradient: LinearGradient(
+              colors: [gradientStartColor, gradientEndColor],
+              begin: FractionalOffset(0.2, 0.0),
+              end: FractionalOffset(1.0, 0.6),
+              stops: [0.0, 0.6],
+              tileMode: TileMode.clamp)),
       child: FittedBox(
         fit: BoxFit.none,
         alignment: Alignment(-1.5, -0.8),
@@ -46,9 +41,6 @@ class GradientBack extends StatelessWidget {
           ),
         ),
       ),
-      
-
     );
   }
-
 }

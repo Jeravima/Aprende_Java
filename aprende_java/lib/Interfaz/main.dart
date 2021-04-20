@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Aprende java',
-          home: //PageOnboardBank(),
-          Login(),
+          home: PageOnboardBank(),
+          //Login(),
         ),
         bloc: UserBloc());
   }

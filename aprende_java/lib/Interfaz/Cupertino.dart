@@ -1,9 +1,7 @@
-import 'package:aprende_java/Nuevo/home_page.dart';
-import 'package:aprende_java/Platzi/Place/ui/screens/home_trips.dart';
-import 'package:aprende_java/Platzi/Place/ui/screens/search_trips.dart';
-import 'package:aprende_java/Platzi/User/bloc/bloc_user.dart';
-import 'package:aprende_java/Platzi/User/ui/screens/profile_trips.dart';
-import 'package:aprende_java/Platzi/widgets/gradient_back.dart';
+import 'package:aprende_java/Interfaz/home_page.dart';
+import 'package:aprende_java/Usuarios/Interfaces/Profilesettings.dart';
+import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
+import 'package:aprende_java/Widgets/GradientBack.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
@@ -48,7 +46,7 @@ class PlatziTripsCupertino extends StatelessWidget {
                 builder: (BuildContext context) {
                   return BlocProvider<UserBloc>(
                     bloc: UserBloc(),
-                    child: ProfileTrips(),
+                    child: ProfileHeader(),
                   );
                 },
               );

@@ -1,29 +1,28 @@
-import 'package:aprende_java/Interfaz/Principal.dart';
-import 'package:aprende_java/Interfaz/swipe.dart';
-import 'package:aprende_java/Nuevo/home_page.dart';
+import 'package:aprende_java/Interfaz/home_page.dart';
 import 'package:aprende_java/Usuarios/Interfaces/Profilesettings.dart';
+import 'package:aprende_java/Widgets/GradientBack.dart';
 import 'package:flutter/material.dart';
 
-class PlatziTrips extends StatefulWidget {
+class PrincipalScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _PlatziTrips();
+    return _PrincipalScreen();
   }
 }
 
-class _PlatziTrips extends State<PlatziTrips> {
+class _PrincipalScreen extends State<PrincipalScreen> {
   int indexTap = 0;
-  final List<Widget> widgetsChildren = [HomePage(), Swiper(),ProfileHeader()];
+  final List<Widget> widgetsChildren = [
+    HomePage(),
+    GradientBack(),
+    ProfileHeader()
+  ];
 
   void onTapTapped(int index) {
     setState(() {
       indexTap = index;
     });
-  }
-
-  void _onRefresh() async {
-    await Future.delayed(Duration(milliseconds: 1000));
   }
 
   @override

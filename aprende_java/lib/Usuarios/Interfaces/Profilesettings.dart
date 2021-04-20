@@ -61,11 +61,6 @@ class ProfileHeader extends StatelessWidget {
     );*/
   }
 
-  void _onRefresh() async {
-    await Future.delayed(Duration(milliseconds: 1));
-    _refreshController.refreshCompleted();
-  }
-
   Widget showProfileData(AsyncSnapshot snapshot) {
     if (!snapshot.hasData || snapshot.hasError) {
       print("No logeado");
@@ -79,7 +74,6 @@ class ProfileHeader extends StatelessWidget {
         ),
       );
     } else {
-      _onRefresh();
       print("Logeado");
       print(snapshot.data);
       user = User(

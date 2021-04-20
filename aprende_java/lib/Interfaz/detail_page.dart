@@ -1,6 +1,7 @@
+import 'package:aprende_java/Widgets/data.dart';
 import 'package:flutter/material.dart';
-import 'package:aprende_java/Nuevo/data.dart';
-import 'constants.dart';
+
+import 'package:aprende_java/Widgets/constants.dart';
 
 class DetailPage extends StatelessWidget {
   final PlanetInfo planetInfo;

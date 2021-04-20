@@ -1,6 +1,5 @@
 
-import 'package:aprende_java/Nuevo/home_page.dart';
-import 'package:aprende_java/Platzi/platzi_trips_cupertino.dart';
+import 'package:aprende_java/Interfaz/PrincipalScreen.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,7 +10,6 @@ import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class Login extends StatefulWidget {
-  
   @override
   State createState() {
     return _Login();
@@ -21,7 +19,7 @@ class Login extends StatefulWidget {
 class _Login extends State<Login> {
 //Define la seccion de la persona uwu
   UserBloc userBloc;
-   double screenWidht;
+  double screenWidht;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +44,7 @@ class _Login extends State<Login> {
         if (!snapshot.hasData || snapshot.hasError) {
           return signInGoogle();
         } else {
-          return PlatziTripsCupertino();
+          return PrincipalScreen();
         }
       },
     );
@@ -58,8 +56,7 @@ class _Login extends State<Login> {
    */
   Widget signInGoogle() {
     return Scaffold(
-      body:
-      Stack(
+      body: Stack(
         alignment: Alignment.center,
         children: [
           GradientBack(height: null),
@@ -87,7 +84,6 @@ class _Login extends State<Login> {
                         uid: user.uid,
                         name: user.displayName,
                         email: user.email,
-                        
                         photoURL: user.photoUrl,
                         rol: "Estudiante"));
                   });
