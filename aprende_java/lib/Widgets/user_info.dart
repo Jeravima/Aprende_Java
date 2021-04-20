@@ -29,12 +29,12 @@ class UserInfo extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                   fontFamily: 'Lato',
                 ))),
         Text(user.email,
             style: TextStyle(
-                fontSize: 15.0, color: Colors.white30, fontFamily: 'Lato')),
+                fontSize: 15.0, color: Colors.black, fontFamily: 'Lato')),
       ],
     );
 

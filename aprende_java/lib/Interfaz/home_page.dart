@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:aprende_java/Widgets/constants.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
-
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -33,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      'Explore',
+                      'Explora',
                       style: TextStyle(
                         fontFamily: 'Avenir',
                         fontSize: 44,
@@ -94,6 +92,7 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Stack(
                         children: <Widget>[
+                          
                           Column(
                             children: <Widget>[
                               SizedBox(height: 100),
@@ -121,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                                         textAlign: TextAlign.left,
                                       ),
                                       Text(
-                                        'Solar System',
+                                        'Java',
                                         style: TextStyle(
                                           fontFamily: 'Avenir',
                                           fontSize: 23,
@@ -134,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                                       Row(
                                         children: <Widget>[
                                           Text(
-                                            'Know more',
+                                            'Aprende Más',
                                             style: TextStyle(
                                               fontFamily: 'Avenir',
                                               fontSize: 18,

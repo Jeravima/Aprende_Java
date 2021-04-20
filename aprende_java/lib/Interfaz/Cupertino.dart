@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
+
 class PlatziTripsCupertino extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

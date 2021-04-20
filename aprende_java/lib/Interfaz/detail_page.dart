@@ -36,7 +36,7 @@ class DetailPage extends StatelessWidget {
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          'Solar System',
+                          'Historia',
                           style: TextStyle(
                             fontFamily: 'Avenir',
                             fontSize: 31,
@@ -63,7 +63,7 @@ class DetailPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Padding(
+                  /*Padding(
                     padding: const EdgeInsets.only(left: 32.0),
                     child: Text(
                       'Gallery',
@@ -76,7 +76,7 @@ class DetailPage extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  Container(
+                 Container(
                     height: 250,
                     padding: const EdgeInsets.only(left: 32.0),
                     child: ListView.builder(
@@ -96,16 +96,11 @@ class DetailPage extends StatelessWidget {
                                 )),
                           );
                         }),
-                  ),
+                  ),*/
                 ],
               ),
             ),
-            Positioned(
-              right: -64,
-              child: Hero(
-                  tag: planetInfo.position,
-                  child: Image.asset(planetInfo.iconImage)),
-            ),
+           
             Positioned(
               top: 60,
               left: 32,
