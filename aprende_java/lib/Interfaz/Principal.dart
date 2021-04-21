@@ -50,9 +50,4 @@ class Principal extends StatelessWidget {
           rol: '',
           uid: '');*/
   }
-
-  void _onRefresh() async {
-    await Future.delayed(Duration(milliseconds: 1000));
-    _refreshController.refreshCompleted();
-  }
 }

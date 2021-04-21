@@ -1,5 +1,6 @@
 import 'package:aprende_java/Usuarios/bloc/bloc_user.dart';
 import 'package:aprende_java/Usuarios/model/user.dart';
+import 'package:aprende_java/Widgets/ButtonBar.dart';
 import 'package:aprende_java/Widgets/user_info.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
@@ -99,6 +100,7 @@ class ProfileHeader extends StatelessWidget {
               children: <Widget>[title],
             ),
             UserInfo(user),
+            ButtonsBar(),
           ],
         ),
       );
